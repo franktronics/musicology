@@ -1,0 +1,40 @@
+$family-l : montserrat;
+$family-b : oswald;
+$defaut-size : 16;
+$defaut-color : #e8631c ;
+
+@function size ($size){
+    @return ( $size / $defaut-size ) * 1rem ;
+}
+
+%width-content{
+    width: 100%;
+    padding-left: calc(( 100% - 1200px) / 2);
+    padding-right: calc(( 100% - 1200px) / 2);
+
+    @media all and (max-width: 770px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    font-size: ($defaut-size * 1px);
+    position: relative;
+    font-family: $family-l;
+}
+body, html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+

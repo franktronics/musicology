@@ -1,0 +1,524 @@
+@import "regles.scss" ;
+
+%botton-dark-style{
+    background: #303030;
+    width: 90%;
+    height: size(65);
+    border: 2px solid #303030;
+    border-radius: 4px;
+    font-size: size(25);
+    font-family: $family-b;
+    margin: size(35) 5% 0 5%;
+    transition: all ease-in-out 0.3s;
+
+    &:hover{
+        border: 2px solid #fff;
+        background: $defaut-color;
+    }
+}
+
+/*section for title "dance tour" */
+.dance-tour{
+    @extend %width-content ;
+
+    padding-top: size(70);
+    background: $defaut-color;
+    padding-bottom: size(50);
+
+    p{
+        text-align: center;
+    }
+    .dance-text-1{
+        font-size: size(75);
+        font-family: $family-b;
+        font-weight: bold;
+        margin-bottom: size(20);
+    }
+    .dance-text-2{
+        font-size: size(28);
+        max-width: size(830);
+        margin: 0 auto;
+        margin-bottom: size(70);
+    }
+    .dance-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .dance-card{
+        width: size(372);
+        height: size(510);
+        position: relative;
+        background: #303030;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        img{
+            transition: all ease-in-out 0.3s;
+        }
+
+        /*le hover pour les cards*/
+        &:hover{
+            .aside-card{
+                transform: translateY(size(-100));
+            }
+            img{
+                transform: scale(1.2);
+                opacity: 0.6;
+            }
+            .card-text-1{
+                color: $defaut-color;
+            }
+            .card-text-3{
+                opacity: 1;
+            }
+        }
+        /*le hover pour les cards*/
+
+        .aside-card{
+            background: #303030;
+            transition: transform ease-in-out 0.3s;
+        }
+        .card-text-1{
+            font-size: size(36);
+            margin-bottom: size(15);
+            margin-top: size(30);
+            font-family: $family-b;
+            transition: color ease-in-out 0.3s;
+        }
+        .card-text-2{
+            font-size: size(22);
+        }
+        .card-text-3{
+            opacity: 0;
+            font-size: size(22);
+            transition: transform ease-in-out 0.3s;
+        }
+    }
+
+    @media all and (max-width: 770px) {
+        .dance-text-1{
+            font-size: size(50);
+        }
+        width: 100%;
+    }
+}
+/*******************************/
+/*******************************/
+/*section for title "pricing" */
+
+.pricing{
+    @extend %width-content ;
+
+    padding-top: size(90);
+    padding-bottom: size(90);
+    background: #303030 url(../img/disign/shape4.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+    p{
+        text-align: center;
+    }
+    .dance-text-1{
+        font-size: size(75);
+        margin-bottom: size(40);
+        font-family: $family-b;
+        font-weight: bold;
+    }
+    .dance-text-2{
+        font-size: size(28);
+        max-width: size(830);
+        margin: 0 auto;
+        margin-bottom: size(80);
+    }
+    .dance-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .dance-card{
+        width: size(372);
+        height: size(510);
+        background: $defaut-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-top: size(60);
+        border-radius: 8px;
+
+        .aside-card{
+            background: $defaut-color;
+
+            button{
+                @extend %botton-dark-style ;
+            }
+        }
+        .card-text-1{
+            font-size: size(36);
+            margin-bottom: size(40);
+            margin-top: size(30);
+            font-family: $family-b;
+        }
+        .card-text-2{
+            font-size: size(22);
+        }
+    }
+    @media all and (max-width: 770px) {
+        .dance-text-1{
+            font-size: size(50);
+        }
+        width: 100%;
+    }
+}
+
+/*******************************/
+/*******************************/
+/*section for title "amazin dance" */
+
+.amazin{
+    width: 100%;
+    padding-left: calc(( 100% - 1440px) / 2);
+    padding-right: calc(( 100% - 1440px) / 2);
+    display: flex;
+    background: $defaut-color url(../img/disign/shape4.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+    img{
+        width: 50%;
+    }
+    .aside-amazin{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        padding-left: size(80);
+        padding-right: size(40);
+    }
+    .amazin-text-1{
+        font-size: size(75);
+        font-family: $family-b;
+        font-weight: bold;
+        margin-bottom: size(60);
+    }
+    .amazin-text-2{
+        font-size: size(22);
+        margin-bottom: size(70);
+    }
+    button{
+        @extend %botton-dark-style ;
+        width: size(320);
+        margin-bottom: 20px;
+    }
+
+    @media all and (max-width: 1050px) {
+        img{
+            display: none;
+        }
+        p{
+            text-align: center;
+        }
+        .amazin-text-1{
+            font-size: size(50);
+            margin-top: 40px;
+        }
+        .aside-amazin{
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            button{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media all and (max-width: 300px){
+        button{
+            width: 90%;
+        }
+    }
+}
+
+/*******************************/
+/*******************************/
+/*section for title "best dance" */
+
+.best-dance{
+    width: 100%;
+    padding-left: calc(( 100% - 1440px) / 2);
+    padding-right: calc(( 100% - 1440px) / 2);
+    display: flex;
+    flex-direction: row-reverse;
+    background: $defaut-color url(../img/disign/shape3.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+
+    img{
+        width: 50%;
+    }
+    .aside-amazin{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        padding-left: size(80);
+        padding-right: size(40);
+    }
+    .amazin-text-1{
+        font-size: size(75);
+        font-family: $family-b;
+        font-weight: bold;
+        margin-bottom: size(60);
+    }
+    .amazin-text-2{
+        font-size: size(22);
+        margin-bottom: size(70);
+    }
+    button{
+        @extend %botton-dark-style ;
+        width: size(320);
+        margin-bottom: 20px;
+    }
+    @media all and (max-width: 1050px) {
+        img{
+            display: none;
+        }
+        p{
+            text-align: center;
+        }
+        .amazin-text-1{
+            font-size: size(50);
+            margin-top: 40px;
+        }
+        .aside-amazin{
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            button{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media all and (max-width: 300px){
+        button{
+            width: 90%;
+        }
+    }
+}
+
+/*******************************/
+/*******************************/
+/*section for title "statistics" */
+.stat{
+    @extend %width-content ;
+
+    padding-top: size(95);
+    padding-bottom: size(60);
+    background: #303030;
+
+    &>p{
+        text-align: center;
+    }
+    .stat-text-1{
+        font-size: size(75);
+        margin-bottom: size(50);
+        font-family: $family-b;
+        font-weight: bold;
+    }
+    .stat-text-2{
+        font-size: size(28);
+        max-width: size(830);
+        margin: 0 auto;
+        margin-bottom: size(80);
+    }
+    .bottom-stat{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+
+        p{
+            font-size: size(65);
+            font-family: $family-b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        p span{
+            font-size: size(30);
+            font-family: $family-l;
+        }
+    }
+    @media all and (max-width: 560px) {
+        .stat-text-1{
+            font-size: size(50);
+        }
+    }
+}
+
+/*******************************/
+/*******************************/
+/*section for title "herbert simon" */
+
+.herbert{
+    @extend %width-content ;
+
+    background: url(../img/dance-4.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: size(300);
+    padding-bottom: size(300);
+
+    .herbert-text-1{
+        font-size: size(40);
+        text-align: center;
+        margin-bottom: size(65);
+    }
+    .herbert-text-2{
+        font-size: size(58);
+        font-family: $family-b;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+/*******************************/
+/*******************************/
+/*section for title "subscribe" */
+
+.souscribe{
+    @extend %width-content ;
+    padding-top: size(130);
+    padding-bottom: size(130);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $defaut-color url(../img/disign/shape.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .souscribe-text-1{
+        font-size: size(58);
+        font-family: $family-b;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: size(50);
+    }
+    .souscribe-text-2{
+        font-size: size(28);
+        text-align: center;
+        max-width: 80%;
+        margin-bottom: size(50);
+    }
+    .email{
+        width: 60%;
+        display: flex;
+
+        input{
+            padding-left: size(25);
+            border-width: 0;
+            color: black;
+            background: #fff;
+            width: 75%;
+            font-size: size(25);
+            height: size(65);
+        }
+        button{
+            width: 25%;
+            height: size(65);
+            border-width: 0;
+            background: #303030;
+            font-size: size(25);
+            transition: all ease-in-out 0.3s;
+
+            &:hover{
+                border: 2px solid #ffffff;
+                background: $defaut-color;
+            }
+        }
+    }
+    @media all and (max-width: 985px) {
+            padding-top: size(50);
+            padding-top: size(50);
+            .souscribe-text-1{
+                font-size: size(50);
+            }
+            .email{
+                width: 90%;
+
+                button{
+                    font-size: size(10);
+                }
+            }
+        }
+}
+
+/*******************************/
+/*******************************/
+/*section for bottom */
+
+.bottom{
+    @extend %width-content ;
+    background: #303030;
+    display: flex;
+    padding-top: size(110);
+    padding-bottom: size(80);
+
+    &>div:first-child{
+        width: 50%;
+        padding-left: size(40);
+        .reseaux{
+            margin-top: size(30);
+            
+            img{
+                margin-right: size(15);
+                transition: transform ease-in-out 0.3s;
+                &:hover{
+                    transform: scale(1.08);
+                }
+            }
+        }
+    }
+    div>p:first-child{
+        font-size: size(32);
+        font-family: $family-b;
+        margin-bottom: size(30);
+    }
+    div>p:nth-child(2){
+        font-size: size(20);
+        padding-right: size(20);
+    }
+    @media all and (max-width: 660px){
+        flex-direction: column;
+        align-items: center;
+        padding-top: size(50);
+
+        .reseaux{
+            display: flex;
+            justify-content: space-around;
+        }
+        &>div:first-child{
+            width: 100%;
+        }
+        div>p:first-child{
+            text-align: center;
+        }
+        div{
+            width: 100%;
+        }
+    }
+}

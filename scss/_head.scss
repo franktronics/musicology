@@ -1,0 +1,171 @@
+@import "regles.scss" ;
+$navbar-size : size(80);
+
+.header{
+    width: 100%;
+    padding-left: calc(( 100% - 1200px) / 2);
+    padding-right: calc(( 100% - 1200px) / 2);
+    background: url(../img/header.jpg) no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    padding-top: $navbar-size;
+
+    .navbar{
+        background: #303030;
+        padding-right: 80px;
+        padding-left: 80px;
+        height: $navbar-size;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        
+        &>label,input{
+            display: none;
+        }
+
+        ul{
+            font-size: size(25);
+            display: flex;
+    
+            li{
+                margin-left: size(55);
+                a{
+                    transition: color ease-in-out 0.3s;
+                    &:hover{
+                        color: #e8631c;
+                    }
+                }
+                
+            }
+            li:first-child{
+                margin-left: 0;
+            }
+        }
+    
+        .search{
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            input{
+                width: 0;
+                height: 40%;
+                border-width: 0;
+            }
+            &:active input{
+                position: absolute;
+                width: 150px;
+            }
+            
+        }
+
+        @media all and (max-width: 1000px){
+            padding-right: 20px;
+            padding-left: 20px;
+
+            .nav-list{
+                display: none;
+            }
+            label{
+                display: inline-block;
+                order: 1;
+                transition: transform ease-in-out 0.3s;
+            }
+            #check:checked~label{
+                transform: rotate(90deg);
+            }
+            #check:checked~.nav-list{
+                display: inline-block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #303030;
+                border-top: 2px solid $defaut-color;
+
+                li{
+                    padding-left: 20px;
+                    margin-top: 5px;
+                    margin-left: 0;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .head-container{
+        font-size: size(28);
+
+        .head-text-1{
+            margin-top: size(70);
+            font-family: $family-b;
+            font-size: size(120);
+        }
+        .head-text-2{
+            max-width: 620px;
+        }
+        button{
+            background: $defaut-color;
+            height: size(65);
+            width: size(320);
+            margin-top: size(45);
+            margin-bottom: size(80);
+            border: 2px solid $defaut-color;
+            border-radius: 4px;
+            font-size: size(28);
+            font-family: $family-b;
+            transition: all ease-in-out 0.3s;
+
+            &:hover{
+                color: $defaut-color;
+                background: #303030;
+            }
+        }
+    }
+    @media all and (max-width: 1200px) {
+        padding-left: 40px;
+        padding-right: 40px;
+
+
+    }
+    @media all and (max-width: 600px) {
+        .head-container{
+            .head-text-1{
+                font-size: size(80);
+            }
+            .head-text-2{
+                font-size: size(20);
+            }
+            button{
+                height: size(43);
+                width: size(213);
+            }
+        }
+    }
+}
+
+/*scroll*/
+.scroll{
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    z-index: 50;
+    border: 2px solid #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .point{
+        height: 0;
+        width: 0;
+        border-bottom: 25px solid rgb(255, 255, 255);
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+    }
+}

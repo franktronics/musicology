@@ -1,0 +1,1 @@
+.\dart-sass\sass ..\scss\app.scss ..\css\style.css --watch --no-source-map
