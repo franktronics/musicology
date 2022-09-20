@@ -1,3 +1,4 @@
+[live](https://franktronics.github.io/musicology/)
 # Structure du projet
     Le projet est constitué d'une seule page index.html avec son style style.css dans ./css
 # Modifications
